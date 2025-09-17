@@ -1,0 +1,21 @@
+id,title,url
+1,Главная страница,https://example.com/
+2,О компании,https://example.com/about
+3,Наши услуги,https://example.com/services
+4,Контакты,https://example.com/contact
+5,Новости,https://example.com/news
+6,Блог,https://example.com/blog
+7,Портфолио,https://example.com/portfolio
+8,Карьера,https://example.com/careers
+9,Партнеры,https://example.com/partners
+10,Политика конфиденциальности,https://example.com/privacy
+11,Условия использования,https://example.com/terms
+12,Поддержка,https://example.com/support
+13,FAQ,https://example.com/faq
+14,Продукты,https://example.com/products
+15,Отзывы,https://example.com/reviews
+16,Галерея,https://example.com/gallery
+17,Документация,https://example.com/docs
+18,API,https://example.com/api
+19,Загрузки,https://example.com/downloads
+20,Подписка,https://example.com/subscribe
