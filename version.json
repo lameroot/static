@@ -1,0 +1,17 @@
+{
+    "build": {
+        "time": "2025-11-21T19:31:47.189Z"
+    },
+    "git": {
+        "branch": {
+            "id": "b41f642a4f98056818779de3b4d1cc3ac9fb1d70",
+            "name": "release/20251121.x",
+            "prefix": "release"
+        },
+        "commit": {
+            "index": "0",
+            "time": "2025-11-21T13:06:01.000Z",
+            "tag": "20251121.0"
+        }
+    }
+}
