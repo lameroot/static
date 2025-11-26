@@ -1,0 +1,1325 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:type" content="article" />
+        <meta property="article:tag" content="router" />
+        <meta property="article:tag" content="API V1" />
+    
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Платежная документация">
+    <meta property="og:title" content="Платежная документация ROUTER">
+    
+    <meta property="og:description" content="Коды ошибок Платежного сервиса">
+
+    <link href="../../images/favicon-8b577386.png" rel="icon" type="image/png" />
+    <title>Документация</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nn {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nl {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .ni {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .bp {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .vg {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .vi {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .w {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+  background-color: #272822;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="../../stylesheets/jsoneditor.min-71243ef2.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/stylesheets/jquery.fancybox.min.css">
+    <link href="../../stylesheets/screen-b86034ea.css" rel="stylesheet" media="screen" />
+    <link href="../../stylesheets/print-bcbd23c6.css" rel="stylesheet" media="print" />
+    <script src="../../javascripts/mermaid-199b6044.js"></script>
+    <script src="../../javascripts/all-5944b8d5.js"></script>
+    <script src="../../javascripts/highlight.min-f104d103.js"></script>
+    <script src="../../javascripts/jsoneditor.min-e220fc00.js"></script>
+    <script src="../../javascripts/parsley.min-95276a45.js"></script>
+    <script src="../../javascripts/jquery.fancybox-2fb64e91.js"></script>
+    <script src="../../javascripts/algoliasearch-lite.umd-8f9c3ad3.js"></script>
+    <script src="../../javascripts/instantsearch.production.min-b710d498.js"></script>
+    <script src="../../javascripts/feedback-ac5a9096.js"></script>
+
+    
+    <script>
+      window.homeLink = `${document.location.origin}/sandbox`;
+      window.isDocker = "false"
+      window.globalContext = "/sandbox";
+      window.pgUAT = "https://api.router.rbsuat.com/v1";
+      window.algoliaIndex = "prod_router";
+      window.bankName = "router"
+      $(document).ready(function() {
+        var languages = $('body').data('languages');
+        $('.lang-selector').each(function(index, item) {
+          if ($(item).is(':empty')) {
+            languages.forEach(function(lang) {
+              $(item).append("<a href='#' data-language-name=" + lang + ">" + lang + "</a>");
+            });
+          }
+        });
+        $('pre.highlight').show();
+      });
+      
+      var translations = {
+        'need-auth': 'Вам необходимо войти в Sandbox. После этого вы сможете использовать виджеты API.',
+        'need-first-sandbox': 'Вам необходимо создать ваш первый Sandbox. После этого вы сможете использовать виджеты API.',
+        'need-sandbox-creating': 'Ваш Sandbox сейчас в процессе создания. После завершения вы сможете использовать виджеты API.',
+        headers: 'Заголовки запросов',
+        params: 'Параметры запроса',
+        unlogged: 'Войти',
+        logged: 'Кабинет',
+        'add-param': 'Добавить параметр',
+        curl: 'Созданный cURL',
+        send: 'Отправить',
+        name: 'Имя',
+        value: 'Значение',
+        body: 'Тело запроса',
+        error: 'Произошла непредвиденная ошибка. Пожалуйста, повторите попытку позже.',
+        'enter-name': 'Введите имя...',
+        'enter-value': 'Введите значение...'
+      }
+      var monthNames = [
+          'Янв',
+          'Фев',
+          'Мар',
+          'Апр',
+          'Май',
+          'Июн',
+          'Июл',
+          'Авг',
+          'Сен',
+          'Окт',
+          'Ноя',
+          'Дек',
+      ]
+      
+    </script>
+    
+
+    
+        <!-- Yandex.Metrika counter -->
+          <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+              var z = null;m[i].l=1*new Date();
+              for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+              k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+              (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+              ym(98830985, "init", {
+                  clickmap:true,
+                  trackLinks:true,
+                  accurateTrackBounce:true,
+                  webvisor:true
+              });
+          </script>
+          <noscript><div><img src="https://mc.yandex.ru/watch/98830985" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    
+  </head>
+  <body class="integration integration_router integration_router_error-codes" data-languages="[&quot;shell&quot;]">
+
+     <div class="toc-wrapper" id="toc-wrapper">
+    
+        <a href="/sandbox" data-need-to-replace-href="false" data-home-link="/sandbox" class="toc-wrapper__logo">
+        <img src="../../images/logo-099c74a2.svg" class="logo" alt="" />
+      </a>
+     
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#error-codes" data-slug="error-codes" class="toc-h1 toc-link" data-title="Коды ошибок Платежного сервиса">
+              <span>Коды ошибок Платежного сервиса</span>
+            </a>
+
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#oshibki-platezhnogo-serwisa--kod-oshibki--chislo" class="toc-h2 toc-link" data-title="Ошибки Платежного сервиса. Код ошибки — число">
+                      Ошибки Платежного сервиса. Код ошибки — число
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#oshibki-platezhnogo-serwisa--bukwenno-tsifrowoj-kod-oshibki" class="toc-h2 toc-link" data-title="Ошибки Платежного сервиса. Буквенно-цифровой код ошибки">
+                      Ошибки Платежного сервиса. Буквенно-цифровой код ошибки
+                    </a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+
+
+      
+    </div>
+
+    <div class="page-wrapper">
+        
+        
+          <div class="external-nav">
+        
+        
+          <div class="search-bar">
+            <div class="search-bar_text">Поиск по ключевым словам</div>
+            <div class="helper-icon">
+                <span class="helper-icon_icon">/</span>
+            </div>
+          </div>
+        
+          <ul>
+            <li>
+             <select style="border: none; margin-top:4px;" js-select-lang name="langs" id="">
+                
+                  
+                    <option value="ru" selected>RU</option>
+                  
+                
+                  
+                    <option value="en">EN</option>
+                  
+                
+             </select>
+            </li>
+            <li><a href="/sandbox/faq.html" id="faq_link">FAQ</a></li>
+            
+            
+
+          </ul>
+        </div>
+      
+
+      
+
+      <div class="mobile-header">
+        <a href="/" class="mobile-header__logo">
+          <img src="../../images/logo-099c74a2.svg" alt="" />
+        </a>
+
+        <div class="mobile-icons">
+        
+          <div class="search-mobile_icon"></div>
+        
+          <div class="mobile-header__btn" id="mobile-nav-btn"></div>
+        </div>
+      </div>
+
+      <div class="content">
+        <nav aria-label="breadcrumbs" class="breadcrumbs">
+    <ol>
+      
+        
+          <li><a href="/#ecommerce">Главная</a></li>
+        
+      
+        
+          <li><a href="#" aria-current="location">Коды ошибок Платежного сервиса</a></li>
+        
+      
+    </ol>
+</nav>
+<h1 id="error-codes">Коды ошибок Платежного сервиса</h1>
+<p>Платежный сервис возвращает как свои собственные ошибки, так и ошибки Банков. 
+При этом формат ответа с ошибкой одинаков — это поля <code>errorCode</code> и <code>errorMessage</code>. 
+Например:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code class="hljs language-json">{
+    "errorCode": "8",
+    "errorMessage": "Card data is incorrect"
+}</code></pre></div><p>Критерием определения принадлежности ошибки (Платежный сервис или Банк) является код ошибки <code>errorCode</code>:</p>
+
+<ul>
+<li>значения больше 90 или буквенно-цифровой код формата АА-000 — ошибки Платежного сервиса;</li>
+<li>значения меньше 90 — ошибки Банка.</li>
+</ul>
+<p>Значение <code>errorCode=0</code> говорит о том, что выполнение операции прошло без технических ошибок (сбоев) 
+и в Платежном сервисе, и в Банке. Однако, это не гарантирует того, что операция в банке выполнена успешно. </p>
+<p>Процессинг банка во многих случаях возвращает свой собственный код исполнения операции, значение которого включается в ответ Платежного сервиса в параметре <code>actionCode</code> и может говорить о том, что запрошенная операция не выполнена процессингом банка, даже если <code>errorCode=0</code>. 
+Коды ответов процессингового центра (<code>actionCode</code>) см. <a href="../api/action_codes.html">здесь</a>.</p>
+<h2 id="oshibki-platezhnogo-serwisa--kod-oshibki--chislo">Ошибки Платежного сервиса. Код ошибки — число</h2>
+<table id="table-12278">
+<thead>
+<tr>
+<th><strong>HTTP code</strong></th>
+<th><strong>Error code</strong></th>
+<th><strong>Error message</strong></th>
+<th><strong>Описание</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>94</td>
+<td>Order has been expired​ in Router at ​{@mdOrder_expiryDate}</td>
+<td>Заказ истек в Платежном сервисе раньше, чем он был маршрутизирован в какой-либо банк</td>
+</tr>
+<tr>
+<td>400</td>
+<td>95</td>
+<td>Order ​{@orderNumber} already exists in ​{@gw_id} but likely was created bypassing​ router. Payment declined by router.</td>
+<td>После выбора банка во время маршрутизации заказа, Платежный сервис проверяет, что заказ с таким номером еще не существует в банке. Однако, банк сообщает, что такой заказ там уже есть.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>97</td>
+<td>You should request QR code first before calling this method</td>
+<td>Попытка вызвать статус или отмену QR-кода до регистрации QR-кода</td>
+</tr>
+<tr>
+<td>400</td>
+<td>97</td>
+<td>Order ​{@orderNumber} was already processed in ​{@gw_id} and cannot be payed again. Please check order status.</td>
+<td>Заказ с указанным номером уже был маршрутизирован в указанный банк. Банк сообщил, что заказ имеет финальный статус. Платежный сервис не принимает повторную оплату заказа.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>97</td>
+<td>Order​ has been canceled</td>
+<td>Заказ был явно отменен в Платежном сервисе (<code>decline.do</code>, <code>actionCode</code> 4005)</td>
+</tr>
+<tr>
+<td>400</td>
+<td>97</td>
+<td>Order ​{@orderNumber} is currently being processed</td>
+<td>Платежный сервис начал оплату указанного заказа в конкретный банк, но данная операция еще не завершилась. Повторные оплаты и некоторые другие операции с этим заказом заблокированы в Платежном сервисе до окончания обработки этого заказа в банке.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Order identification is not provided</td>
+<td>
+<code>orderNumber</code> или <code>mdOrder</code> (<code>orderId</code>) отсутствуют в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Order not found</td>
+<td>Заказ с указанным номером (идентификатором) не найден</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Binding not found in ${gw_arr}. Check bindingId and clientId</td>
+<td>
+<code>bindingId</code> из запроса не был найден в банках (список опрошенных банков)</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Initial recurrent payment (tii=RI) should have [recurringFrequency] and [recurringExpiry] additional json parameters</td>
+<td>Некорректные доп. параметры заказа</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>clientId must be specified for initial recurrent payment</td>
+<td>В данном запросе необходим <code>clientId</code>
+</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Initial installment payment (tii=II) should have [installments], [recurringFrequency] and [recurringExpiry] additional json parameters</td>
+<td>Некорректные доп. параметры заказа</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>clientId must be specified for initial installment payment</td>
+<td>В данном запросе необходим <code>clientId</code>
+</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Initial installment payment should also have both recurringFrequency and recurringExpiry parameters</td>
+<td>Некорректные доп. параметры заказа</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Both recurringFrequency and recurringExpiry should be specified for initial recurrent or installment payment</td>
+<td>Некорректные доп. параметры заказа</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>clientId must be specified for initial recurrent or installment payment</td>
+<td>В данном запросе необходим <code>clientId</code>
+</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>clientId must be specified when using VERIFY feature</td>
+<td>В данном запросе необходим <code>clientId</code>
+</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Order​ not found in ​{@gw_target_id}</td>
+<td>После оплаты в указанный банк этот банк не смог вернуть статус заказа</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Order ​{@orderNumber} already registered</td>
+<td>Заказ с таким номером уже зарегистрирован в Платежном сервисе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>At least one of the specified payment ways is not supported</td>
+<td>При регистрации заказа в Платежном сервисе указан метод оплаты, который не поддерживается в Платежном сервисе (CARD, BINDING, SBP_C2B и т.п.)</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>clientId must be specified when using binding creator merchant</td>
+<td>При работе под данным логином необходимо указывать <code>clientId</code>
+</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Additional parameters back2app and app2app are mutually exclusive</td>
+<td>Некорректные доп. параметры заказа для Sberbank Online</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Phone number must be specified when using back2app or app2app additional parameter</td>
+<td>Некорректные доп. параметры заказа для Sberbank Online</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Phone number does not match required pattern for SBOL payment. Valid formats: +79000000000, 89000000000</td>
+<td>Некорректные доп. параметры заказа для Sberbank Online</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Additional parameter app.osType must be either ios or android</td>
+<td>Некорректные доп. параметры заказа для Sberbank Online</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Additional parameter app.deepLink has incorrect format</td>
+<td>Некорректные доп. параметры заказа для Sberbank Online</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Binding not found</td>
+<td>Указанная связка не найдена</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Incorrect seToken</td>
+<td>Некорректное содержание seToken</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Request template is not defined for ${routerRequest}</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с парсингом входящего запроса</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Request template ${msgType} for ${routerRequest} is not defined in protocol</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с парсингом входящего запроса</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>${field} does not match required pattern ${pattern}</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>${field} parameter must be an Array</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>${field} parameter must be an Object</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>${field} parameter must be a number</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>${field} exceeded max length ${maxLength}</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>${field} must be one of ${enumArray}</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>${field} is a required parameter</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>98</td>
+<td>Currency [$currency] is not allowed in any bank</td>
+<td>Некорректное значение параметра в запросе</td>
+</tr>
+<tr>
+<td>401</td>
+<td>90</td>
+<td>Authentication failed (​{@gw_target_id}​). Check login and password</td>
+<td>Аутентификация в указанном банке завершилась неудачно</td>
+</tr>
+<tr>
+<td>403</td>
+<td>93</td>
+<td>MirPay link is not available</td>
+<td>Ссылка на MirPay не была получена от банка (некорректная конфигурация Партнера в банке)</td>
+</tr>
+<tr>
+<td>404</td>
+<td>-</td>
+<td>-</td>
+<td>Метод не существует</td>
+</tr>
+<tr>
+<td>415</td>
+<td>-</td>
+<td>-</td>
+<td>Некорректный content type для данного метода</td>
+</tr>
+<tr>
+<td>500</td>
+<td>97</td>
+<td>Order ​{@orderNumber} was already processed​ in ​{@gw_id}​. Error checking current​ order status. Operation declined.</td>
+<td>Заказ с указанным номером уже был маршрутизирован в указанный банк, однако получить статус заказа в этом банке не удалось. Запрос в указанный банк передан не будет.</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Error loading router settings</td>
+<td>Некорректные системные настройки Платежного сервиса</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>System error</td>
+<td>Внутренняя ошибка Платежного сервиса, связанная с разными причинами. Подробности необходимо запросить у технической поддержки</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Unsupported payment way</td>
+<td>Платежный сервис не смог определить способ оплаты (card, seToken, bindingId)</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Authentication failed​: no gateways available</td>
+<td>Не удалось выполнить аутентификацию апи-пользователя: все банки неактивны</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Failed to decrypt or read seToken</td>
+<td>Ошибка дешифрации seToken</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Error getting gateway parameters: {@gw_target_id}</td>
+<td>Внутренняя ошибка Платежного сервиса - проблема с подключением к конкретному банку</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Gateway settings for ${gw_target_id} not found</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с подключением к конкретному банку</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Gateway settings for ${gw_target_id} are incomplete</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с подключением к конкретному банку</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Unable to load merchant settings</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с настройками Партнера</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Error loading merchant settings. Check router settings are valid and assigned to the merchant</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с настройками Партнера</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Internal error  checking hessian response for success: {@service_name}</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с парсингом ответа банка</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Failed to parse incoming request​ or ​{@api_pathAndMethod}. Check JSON syntax in request body.</td>
+<td>Некорректный JSON в запросе</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Response template is not defined for ${routerRequest}</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с подготовкой ответа Платежного сервиса</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Response template ${msgType} for ${routerRequest} is not defined in protocol</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с подготовкой ответа Платежного сервиса</td>
+</tr>
+<tr>
+<td>500</td>
+<td>99</td>
+<td>Mirpay gateway is not specified for merchant {@merchant_name}</td>
+<td>Некорректная конфигурация Партнера в Платежном сервисе</td>
+</tr>
+<tr>
+<td>500</td>
+<td>-</td>
+<td>-</td>
+<td>Внутренняя необработанная (непредсказуемая) ошибка Платежного сервиса</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>Payment failed</td>
+<td>Не удалось выполнить оплату</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>There​ was problem processing​ order in ​{@gw_id}</td>
+<td>При вызове <code>instantPayment</code> в банк произошла ошибка</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>Hessian response was unsuccessful</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с парсингом ответа банка</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>Call to bank's gateway service ${context.gw_host:${service} was unsuccessful. Response HTTP code: ${httpCode}, response conent type: ${contentType}, error message: none</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с парсингом ответа банка</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>Currency conversion failed</td>
+<td>Ошибка при взаимодействии с сервисом конвертации валют</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>Target gateway is inactive and no alternate gateways available</td>
+<td>Выбранный банк в данный момент неактивен (отключен), и для Партнера не осталось ни одного другого активного банка, способного принять оплату заказа.</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>Call to service $value returned empty body</td>
+<td>Внутренняя ошибка Платежного сервиса — проблема с парсингом ответа стороннего сервиса</td>
+</tr>
+<tr>
+<td>502</td>
+<td>99</td>
+<td>Binding data not received from gateway {@binding_gw_id}</td>
+<td>Платежный сервис определил принадлежность связки конкретному банку, но банк не вернул данные по связке</td>
+</tr>
+<tr>
+<td>504</td>
+<td>91</td>
+<td>Timeout when requesting ​{@service_name}​</td>
+<td>Таймаут на Платежном сервисе при запросе в определенный банк</td>
+</tr>
+</tbody>
+</table>
+<h2 id="oshibki-platezhnogo-serwisa--bukwenno-tsifrowoj-kod-oshibki">Ошибки Платежного сервиса. Буквенно-цифровой код ошибки</h2>
+<p>Точный текст ошибки не приводится, поскольку может быть изменен без предварительного уведомления. 
+Для анализа следует использовать код ошибки — он уникален для каждой причины.</p>
+<p>Буквенный код обозначает тип ошибки.</p>
+<h3 id="bd--oshibki-swjazok">BD — ошибки связок</h3>
+<table id="table-1201">
+<thead>
+<tr>
+<th>HTTP код</th>
+<th>Код ошибки</th>
+<th>Описание</th>
+<th>Возможные причины</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>BD-102</td>
+<td>В ответе на запрос <code>getBindings.do</code> список связок может быть неполным, так как возникли ошибки при получении связок как минимум из одного банка</td>
+<td>Временно недоступен сервис связок в одном или нескольких банках</td>
+</tr>
+<tr>
+<td>200</td>
+<td>BD-103</td>
+<td>В ответе на запрос <code>getBindings.do</code> поля <code>bankName</code> и <code>paymentSystem</code> могут быть пустыми или содержать некорректное значение, так как соответствующий сервис не вернул данных по картам.</td>
+<td>Временно недоступен сервис данных по картам</td>
+</tr>
+<tr>
+<td>200</td>
+<td>BD-104</td>
+<td>При сборе списка связок возникли ошибки BD-102 и BD-103, т.е. и список связок может быть неполным, и поля могут быть некорректны</td>
+<td>Временно недоступен сервис связок в одном или нескольких банках и одновременно недоступен сервис данных по картам</td>
+</tr>
+<tr>
+<td>400</td>
+<td>BD-201</td>
+<td>СБП связка (подписка) не найдена по переданному bindingId (деактивация СБП подписки).</td>
+<td><ul>
+<li>В запросе указан неверный <code>bindingId</code>.</li>
+<li>Временно недоступен сервис хранения связок для банка, которому принадлежит связка.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pm--oshibki-w-protsesse-oplaty-zakaza">PM — ошибки в процессе оплаты заказа</h3>
+<table id="table-249">
+<thead>
+<tr>
+<th>HTTP код</th>
+<th>Код ошибки</th>
+<th>Описание</th>
+<th>Возможные причины</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>PM-102</td>
+<td>Для указанных параметров платежа (сумма, карта, способ оплаты и т.д.) запрещено выполнять оплату</td>
+<td>В настройках маршрутизации имеется правило, запрещающие принимать оплату с такими параметрами</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ro--oshibki-pri-marshrutizatsii">RO — ошибки при маршрутизации</h3>
+<table id="table-1321">
+<thead>
+<tr>
+<th>HTTP код</th>
+<th>Код ошибки</th>
+<th>Описание</th>
+<th>Возможные причины</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>500</td>
+<td>RO-201</td>
+<td>Вызываемый API-метод Платежного сервиса подразумевает, что заказ уже должен быть в каком-либо Банке, однако заказ еще не поступил ни в один Банк</td>
+<td>Попытка возврата или отмены по заказу, который не ушел ни в один Банк</td>
+</tr>
+<tr>
+<td>502</td>
+<td>RO-202</td>
+<td>Не удалось зарегистрировать заказ в банке, доступном для данного способа оплаты, и нет альтернатив.</td>
+<td><ul>
+<li>Платежный сервис временно деактивировал все Банки, доступные Партнеру (из-за сетевой недоступности, превышения порога ошибок и т.п.)</li>
+<li>Для оплаты доступен только один банк (без альтернатив), и регистрация заказа в нем завершилась ошибкой</li>
+</ul></td>
+</tr>
+<tr>
+<td>502</td>
+<td>RO-204</td>
+<td>Нет доступных (активных) Банков для маршрутизации СБП оплат</td>
+<td><ul>
+<li>Платежный сервис временно деактивировал все Банки, доступные Партнеру для СБП оплат (из-за сетевой недоступности, превышения порога ошибок и т.п.)</li>
+<li>Для оплаты доступен только один банк (без альтернатив), и регистрация заказа в нем завершилась ошибкой</li>
+</ul></td>
+</tr>
+<tr>
+<td>500</td>
+<td>RO-205</td>
+<td>Адрес BNPL модуля не задан для банка, через который осуществляется BNPL оплата</td>
+<td>Ошибка конфигурирования банка в Платежном сервисе: не указаны параметры обращения к BNPL модулю.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vp--oshibki-swjazannye-s-vendor-pays">VP — ошибки, связанные с vendor pays</h3>
+<table id="table-743">
+<thead>
+<tr>
+<th>HTTP код</th>
+<th>Код ошибки</th>
+<th>Описание</th>
+<th>Возможные причины</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>502</td>
+<td>VP-201</td>
+<td>Ошибка T-Pay - не удалось зарегистрировать заказ для оплаты по T-Pay</td>
+<td>Недоступность сервисов Банка</td>
+</tr>
+<tr>
+<td>502</td>
+<td>VP-202</td>
+<td>Ошибка T-Pay - не удалось получить ссылку на QR код</td>
+<td>Недоступность сервисов Банка</td>
+</tr>
+<tr>
+<td>502</td>
+<td>VP-203</td>
+<td>Ошибка T-Pay - не удалось отменить QR код</td>
+<td>Недоступность сервисов Банка</td>
+</tr>
+<tr>
+<td>502</td>
+<td>VP-211</td>
+<td>Ошибка Yandeх PayBox - не удалось зарегистрировать заказ для оплаты по Yandex PayBox</td>
+<td>Недоступность сервисов Банка</td>
+</tr>
+<tr>
+<td>502</td>
+<td>VP-212</td>
+<td>Ошибка Yandeх PayBox - не удалось получить платежную ссылку</td>
+<td>Недоступность сервисов Банка</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vr--oshibki-walidatsii-whodjaschih-zaprosow">VR — ошибки валидации входящих запросов</h3>
+<table id="table-5316">
+<thead>
+<tr>
+<th>HTTP код</th>
+<th>Код ошибки</th>
+<th>Описание</th>
+<th>Возможные причины</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400</td>
+<td>VR-230</td>
+<td>Некорректные данные в поле <code>orderBundle.orderCreationDate</code>
+</td>
+<td>Неверный формат даты или дата в будущем</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-231</td>
+<td>Некорректные данные в блоке <code>orderBundle.customerDetails</code>
+</td>
+<td>Одно или несколько обязательных полей в блоке <code>customerDetails</code> отсутствует или заполнено неверно</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-232</td>
+<td>Некорректные данные в блоке <code>orderBundle.customerDetails.deliveryInfo</code>
+</td>
+<td>Одно или несколько обязательных полей в блоке <code>customerDetails.deliveryInfo</code> отсутствует или заполнено неверно</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-233</td>
+<td>Некорректные данные в блоке <code>orderBundle.cartItems.items</code>
+</td>
+<td>Одно или несколько обязательных полей в блоке <code>orderBundle.cartItems.items</code> отсутствует или заполнено неверно</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-234</td>
+<td>
+<code>itemAmount</code> должно быть равно произведению <code>itemPrice</code> на количество</td>
+<td>Значение <code>itemAmount</code> не совпадает с произведением <code>itemPrice</code> x <code>quantity</code>
+</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-235</td>
+<td>Сумма заказа должна быть равна сумме стоимости всех позиций</td>
+<td>Стоимость всех позиций заказа не совпадает с суммой заказа</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-236</td>
+<td>Некорректные данные в <code>orderBundle.cartItems.items.itemAttributes</code>
+</td>
+<td>Одно или несколько обязательных полей в блоке <code>orderBundle.cartItems.items.itemAttributes</code> отсутствует или заполнено неверно</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-243</td>
+<td>Связка, указанная при регистрации заказа, не найдена</td>
+<td>При регистрации заказа указан параметр <code>bindingId</code> или <code>defaultBindingId</code>, но данные по этой связке получить не удалось.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-244</td>
+<td>Ошибка валидации связки, указанной при регистрации заказа</td>
+<td>При регистрации заказа указаны оба параметра <code>bindingId</code> и <code>defaultBindingId</code>. Необходимо указать что-то одно.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-245</td>
+<td>Некорректный тип связки при оплате заказа</td>
+<td>Попытка использовать при оплате eCom-заказа рекуррентную связку или связку для рассрочки</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-260</td>
+<td>Параметр запроса clientId не указан, но является обязательным в данном случае</td>
+<td>
+<code>clientId</code> может стать обязательным параметром в некоторых случаях, например: <br>- В запросе регистрации указан идентификатор связки. <br>- Другие параметры запроса указывают, что необходимо будет создать связку. Например, если указано <code>"feature": ["VERIFY"]</code> или выполняется регистрация инициирующего рекуррентного платежа.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-306</td>
+<td>Заказ с таким номером уже обработан</td>
+<td>Попытка выполнить повторный вызов <code>instantPayment.do</code> с тем же самым номером заказа <code>orderNumber</code> или <code>instantPayment.do</code> c номером заказа, который был ранее зарегистрирован в Платежном сервисе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-307</td>
+<td>Заказ с таким номером уже обработан</td>
+<td>Попытка выполнить повторный <code>recurrentPayment.do</code> с тем же самым номером заказа или <code>recurrentPayment.do</code> c номером заказа, который был ранее зарегистрирован в Платежном сервисе</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-351</td>
+<td>Ошибка проверки подписи запроса. Пустое тело запроса</td>
+<td>Отсутствует тело запроса. В общем случае вместо этой ошибки возвращается код <code>99 Failed to parse incoming request</code>
+</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-352</td>
+<td>Ошибка проверки подписи запроса. Пустой заголовок X-Hash</td>
+<td>Отсутствует хэш тела запроса</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-353</td>
+<td>Ошибка проверки подписи запроса. Неправильный хэш в заголовке X-Hash</td>
+<td>Хэш запроса сгенерирован неправильно или передан в неверной кодировке. Передавайте хэш в кодировке base64.</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-354</td>
+<td>Ошибка проверки подписи запроса. Пустой заголовок X-Signature</td>
+<td>Отсутствует подпись запроса</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-355</td>
+<td>Ошибка проверки подписи запроса. Неправильная подпись</td>
+<td>Подпись запроса сформирована неверно</td>
+</tr>
+<tr>
+<td>500</td>
+<td>VR-356</td>
+<td>Ошибка проверки подписи запроса. Отсутствуют сертификаты для проверки подписи</td>
+<td>У Партнера нет ни одного действующего сертификата для проверки подписи запроса</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-357</td>
+<td>Ошибка проверки подписи запроса. Ошибка расшифровки подписи из формата Base64</td>
+<td>Подпись запроса передана в неверном формате</td>
+</tr>
+<tr>
+<td>400</td>
+<td>VR-601</td>
+<td>Перед выполнением платежной операции по заказу в конкретном банке Платежный сервис обнаружил, что в этом Банке уже есть заказ с таким же номером, но он был создан не через Платежный сервис.</td>
+<td>Регистрация Партнером заказа с одним и тем же номером сначала напрямую в Банке (минуя Платежный сервис), затем в Платежном сервисе. После выбора целевого банка Платежный сервис проверяет, существует ли уже заказ с указанным <code>orderNumber</code> в этом банке. В норме его не должно быть. Если заказ найден, возникает ошибка.</td>
+</tr>
+</tbody>
+</table>
+
+        
+      </div>
+
+      
+            <div class="categories__wrapper">
+              <div class="categories__wrapper-title">Категории:</div>
+              <div class="categories__wrapper-list">
+                  <span class="categories__wrapper-list__item">router</span>
+                  <span class="categories__wrapper-list__item">API V1</span>
+              </div>
+            </div>
+      
+
+        
+        <div class="toc-wrapper__right" id="toc-wrapper-right">
+        <ul id="toc-right" class="toc-list-h3">
+        <div class="toc-list-h3 title" style="display: none;">В этом пункте</div>
+                    <li style="display: none;">
+                      <a href="#bd--oshibki-swjazok" class="toc-h3 toc-link" data-title="BD — ошибки связок" data-parent="oshibki-platezhnogo-serwisa--bukwenno-tsifrowoj-kod-oshibki">
+                        BD — ошибки связок
+                      </a>
+                    </li>
+                    <li style="display: none;">
+                      <a href="#pm--oshibki-w-protsesse-oplaty-zakaza" class="toc-h3 toc-link" data-title="PM — ошибки в процессе оплаты заказа" data-parent="oshibki-platezhnogo-serwisa--bukwenno-tsifrowoj-kod-oshibki">
+                        PM — ошибки в процессе оплаты заказа
+                      </a>
+                    </li>
+                    <li style="display: none;">
+                      <a href="#ro--oshibki-pri-marshrutizatsii" class="toc-h3 toc-link" data-title="RO — ошибки при маршрутизации" data-parent="oshibki-platezhnogo-serwisa--bukwenno-tsifrowoj-kod-oshibki">
+                        RO — ошибки при маршрутизации
+                      </a>
+                    </li>
+                    <li style="display: none;">
+                      <a href="#vp--oshibki-swjazannye-s-vendor-pays" class="toc-h3 toc-link" data-title="VP — ошибки, связанные с vendor pays" data-parent="oshibki-platezhnogo-serwisa--bukwenno-tsifrowoj-kod-oshibki">
+                        VP — ошибки, связанные с vendor pays
+                      </a>
+                    </li>
+                    <li style="display: none;">
+                      <a href="#vr--oshibki-walidatsii-whodjaschih-zaprosow" class="toc-h3 toc-link" data-title="VR — ошибки валидации входящих запросов" data-parent="oshibki-platezhnogo-serwisa--bukwenno-tsifrowoj-kod-oshibki">
+                        VR — ошибки валидации входящих запросов
+                      </a>
+                    </li>
+        </ul>
+      </div>
+    </div>
+
+    
+      
+
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__left">
+            <img src="../../images/logo_white-ba821e37.svg" class="logo__img" alt="" />
+        </div>
+        <div class="footer__right">
+        © <script>var CurrentYear = new Date().getFullYear();document.write(CurrentYear)</script>
+        <p>ROUTER</p>
+          <p></p>
+        </div>
+      </div>
+    </footer>
+    
+    </div>
+
+    <!------------- MODALS ------------->
+    
+
+    
+    <!-- Search modal -->
+    <div class="search">
+            <div id="hits" class="hits">
+                <div>
+                  <div class="ecommerce__switcher">
+                    <label class="ecommerce__switcher-switch">
+                      <input type="checkbox" name="api-mode" id="api-mode" />
+                      
+                      <label htmlFor="api-mode" data-on="API V2" data-off="API V1" class="inner" />
+                      
+                    </label>
+                    
+                    <span class="ecommerce__switcher-beta">Beta</span>
+                    
+                  </div>
+                  <div id="searchbox"></div>
+                </div>
+                <div class="categories-block">
+                    <div class="categories-title">Категории</div>
+                    <div id="categories"></div>
+                </div>
+                <div class="hits-block">
+                    <div class="hits-title">Результаты поиска</div>
+                    <div id="hits-search"></div>
+                </div>
+                <div id="pagination" class="pagination"></div>
+                <div class="empty-results">
+                    <div class="empty-results_icon"></div>
+                    <div class="empty-results_text"></div>
+                </div>
+                <div class="search-footer">
+                    <div class="search-footer_item">
+                        <div class="search-footer_icons">
+                            <div class="search-footer_icon arrow-up"></div>
+                            <div class="search-footer_icon arrow-down"></div>
+                        </div>
+                        <div class="search-footer_title">Навигация</div>
+                    </div>
+                    <div class="search-footer_item">
+                        <div class="search-footer_icons">
+                            <div class="search-footer_icon enter"></div>
+                        </div>
+                        <div class="search-footer_title">Перейти</div>
+                    </div>
+                    <div class="search-footer_item">
+                        <div class="search-footer_icons">
+                            <div class="search-footer_icon esc"></div>
+                        </div>
+                        <div class="search-footer_title">Закрыть</div>
+                    </div>
+                </div>
+            </div>
+            <div class="black-box"></div>
+        </div>
+
+        <div class="search-mobile">
+            <div class="hits-mobile">
+                <div class="hits-mobile_close"></div>
+                <div class="search-mobile__inner_wrapper">
+                  <div class="ecommerce__switcher">
+                    <label class="ecommerce__switcher-switch">
+                      <input type="checkbox" name="api-mode" id="api-mode" />
+                      
+                      <label htmlFor="api-mode" data-on="API V2" data-off="API V1" class="inner" />
+                      
+                    </label>
+                    
+                    <span class="ecommerce__switcher-beta">Beta</span>
+                    
+                  </div>
+                  <div id="searchbox"></div>
+                </div>
+                <div class="categories-block">
+                    <div class="categories-title">Категории</div>
+                    <div id="categories"></div>
+                </div>
+                <div class="hits-block">
+                    <div class="hits-title">Результаты поиска</div>
+                    <div id="hits-search"></div>
+                </div>
+                <div id="pagination" class="pagination"></div>
+                <div class="empty-results">
+                    <div class="empty-results_icon"></div>
+                    <div class="empty-results_text"></div>
+                </div>
+            </div>
+            <div class="black-box_mobile"></div>
+        </div>
+      
+    <script type="speculationrules">
+      {
+        "prerender": [{
+          "source": "document",
+          "where": {
+            "href_matches": "/*"
+          },
+          "eagerness": "moderate"
+        }]
+      }
+    </script>
+    <script>
+      mermaid.initialize({startOnLoad:true});
+    </script>
+  </body>
+</html>
